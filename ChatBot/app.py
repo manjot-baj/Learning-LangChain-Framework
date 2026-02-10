@@ -5,12 +5,14 @@ import streamlit as st
 import os
 from decouple import config
 
+# LangSmith Tracking
+os.environ["LANGCHAIN_TRACING_V2"] = "true"
+os.environ["LANGCHAIN_API_KEY"] = config("LANGSMITH_API_KEY")
+os.environ["LANGCHAIN_PROJECT"] = config("LANGCHAIN_PROJECT", default="default")
+
+# MistralAI
 MISTRALAI_KEY = config("MISTRALAI_KEY")
 
-# LangSmith Tracking
-LANGCHAIN_PROJECT = config("LANGCHAIN_PROJECT")
-LANGSMITH_API_KEY = config("LANGSMITH_API_KEY")
-LANGCHAIN_TRACING_V2 = "true"
 
 # Prompt Template
 
