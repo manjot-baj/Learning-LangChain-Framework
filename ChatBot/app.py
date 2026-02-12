@@ -8,11 +8,10 @@ from decouple import config
 # LangSmith Tracking
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
 os.environ["LANGCHAIN_API_KEY"] = config("LANGSMITH_API_KEY")
-os.environ["LANGCHAIN_PROJECT"] = config("LANGCHAIN_PROJECT", default="default")
+os.environ["LANGCHAIN_PROJECT"] = config("LANGCHAIN_PROJECT")
 
 # MistralAI
 MISTRALAI_KEY = config("MISTRALAI_KEY")
-
 
 # Prompt Template
 
