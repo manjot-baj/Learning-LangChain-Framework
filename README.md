@@ -1,1 +1,1 @@
-# Learning-LangChain-Framework
+# Learning Applied AI
